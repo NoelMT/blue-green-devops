@@ -45,10 +45,10 @@ export async function middleware(req: NextRequest) {
   if (/vercel/i.test(req.headers.get("user-agent") || "")) {
     return NextResponse.next();
   }
-  if (!process.env.EDGE_CONFIG) {
-    console.warn("EDGE_CONFIG env variable not set. Skipping blue-green.");
-    return NextResponse.next();
-  }
+  //if (!process.env.EDGE_CONFIG) {
+  //  console.warn("EDGE_CONFIG env variable not set. Skipping blue-green.");
+  //  return NextResponse.next();
+  //}
   // Get the blue-green configuration from Edge Config.
   const blueGreenConfig = await get<BlueGreenConfig>(
     "blue-green-configuration"

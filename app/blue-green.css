@@ -1,6 +1,6 @@
 body {
   /*  url("greenpic.jpg")  */
-  background-image: url("bluepic.jpg"); 
+  background-image: url("bluepic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -21,6 +21,7 @@ body {
   text-transform: uppercase;
   animation: blinker 4s linear infinite, bounce 2s infinite;
   text-align: center;
+  cursor: url("spoon_optimized.png"), auto;
 }
 
 .company-name {
@@ -30,6 +31,12 @@ body {
   font-size: 5rem;
   color: #ffffff;
   text-align: center;
+}
+
+.random-text {
+  position: absolute;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 @keyframes blinker {

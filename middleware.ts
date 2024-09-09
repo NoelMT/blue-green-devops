@@ -90,7 +90,7 @@ export async function middleware(req: NextRequest) {
 // Selects the deployment domain based on the edge configuration.
 function selectBlueGreenDeploymentDomain(blueGreenConfig: BlueGreenConfig) {
   const random = Math.random() * 100;
-    const selected;
+    let selected;
     if (random < blueGreenConfig.trafficGreenPercent) {
        selected = blueGreenConfig.deploymentDomainGreen;
     } else {

@@ -98,7 +98,11 @@ function selectBlueGreenDeploymentDomain(blueGreenConfig: BlueGreenConfig) {
     }
   
   if (!selected) {
-    console.error("no link?");
+    console.error("no link?", blueGreenConfig);
+  }
+  
+  if (/^http/.test(selected || "")) {
+    return new URL(selected || "").hostname;
   }
   
   return selected;

@@ -14,7 +14,7 @@ body {
 
 .blue-text {
   /*  green: rgb(0, 255, 98) blu: 0,170,255 */
-  color: rgb(255,0,0);
+  color: rgb(0,170,255);
   font-size: 15rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
